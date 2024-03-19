@@ -1,0 +1,26 @@
+.content__form-text p {
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.content__form {
+    background-color: #DCDCDC;
+    height: 79vh;
+}
+
+.content__form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__form-buttons button {
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 70px 170px;
+    margin: 30px 50px;
+}
