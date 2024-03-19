@@ -1,14 +1,19 @@
 # Case_1
 
 # アプリケーション名: 　Atte
-![](image.png)
+![ログインページ](image-1.png)
+![ユーザー登録ページ](image-2.png)
+![打刻ページ](image.png)
+![日付別勤怠管理ページ](image-3.png)
 
 ## 目的・目標
-目的：人事評価のため　　
+目的：人事評価のため　
+　
 目標：利用者100人達成
 
 ## アプリケーションURL
-開発環境： http://localhost/　　
+開発環境： http://localhost/
+
 phpMyAdmin: Http://localhost:8080/
 
 「注意事項」
@@ -18,21 +23,23 @@ phpMyAdmin: Http://localhost:8080/
 関係するリポジトリがあれば記載 -->
 
 ## 機能一覧
-認証機能　　
+認証機能　
 　・ユーザー登録
 　・ログイン・アウト機能
 
-打刻機能　　
+打刻機能　
 　・勤務開始・終了の記録
 　・休憩開始・終了の記録
 
-勤怠管理　　
+勤怠管理　
 　・日付別勤怠情報の取得
 
 ## 使用技術
-　開発言語：PHP　　
-　フレームワーク：Laravel　3.8　　
-　バージョン管理：GitHub　　
+　開発言語：PHP
+
+　フレームワーク：Laravel　3.8
+
+　バージョン管理：GitHub
 
 ## テーブル設計
 
@@ -43,7 +50,7 @@ phpMyAdmin: Http://localhost:8080/
 # 環境構築
 
 Dockerビルド
-    1.　　
+    1.git clone 
     2.docker-compose up -d --build　　
 
 *MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。
