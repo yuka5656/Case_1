@@ -40,12 +40,13 @@ phpMyAdmin: Http://localhost:8080/
 　・休憩開始・終了の記録
 
 勤怠管理
+
 　・日付別勤怠情報の取得
 
 ## 使用技術
 　開発言語：PHP
 
-　フレームワーク：Laravel　3.8
+　フレームワーク：Laravel3.8
 
 　バージョン管理：GitHub
 
@@ -53,15 +54,15 @@ phpMyAdmin: Http://localhost:8080/
 
 
 ## ER図
-
+![ER図](index.drawio.png)
 
 # 環境構築
 
 Dockerビルド
-    1.git clone これから
-    2.docker-compose up -d --build　　
 
-*MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。
+    1.git clone これから
+
+    2.docker-compose up -d --build　　
 
 Laravel環境構築
 
@@ -70,6 +71,7 @@ Laravel環境構築
     3..env.exampleファイルから.envを作成し、環境変数を変更してください
     4.php artisan key:generate
     5.php artisan migrate
-    6.php srtisan db:seed
+    6.php artisan db:seed
 
 ##　その他
+該当なし
