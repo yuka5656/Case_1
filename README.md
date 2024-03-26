@@ -11,8 +11,8 @@
 ![日付別勤怠管理ページ](image-3.png)
 
 ## 目的・目標
-目的：人事評価のため　
-　
+目的：人事評価のため
+
 目標：利用者100人達成
 
 ## アプリケーションURL
@@ -21,6 +21,7 @@
 phpMyAdmin: Http://localhost:8080/
 
 「注意事項」
+
 ログインページに移行しますので、ユーザー登録をしてください。
 
 <!-- ##　他のリポジトリ
@@ -46,7 +47,7 @@ phpMyAdmin: Http://localhost:8080/
 ## 使用技術
 　開発言語：PHP
 
-　フレームワーク：Laravel3.8
+　フレームワーク：Laravel 3.8
 
 　バージョン管理：GitHub
 
@@ -62,7 +63,7 @@ Dockerビルド
 
     1.git clone これから
 
-    2.docker-compose up -d --build　　
+    2.docker-compose up -d --build
 
 Laravel環境構築
 
@@ -73,5 +74,5 @@ Laravel環境構築
     5.php artisan migrate
     6.php artisan db:seed
 
-##　その他
-該当なし
+<!-- ##　その他
+該当なし -->

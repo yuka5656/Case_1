@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DateStamps extends Model
+class Timestamp extends Model
 {
     use HasFactory;
 

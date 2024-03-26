@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\AuthenticatedSessionController;
 
 /*
@@ -17,8 +17,9 @@ use App\Http\Controllers\AuthenticatedSessionController;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'index']);
-    Route::post('/', [AuthenticatedSessionController::class, 'Timestamps']);
 });
+
+Route::post('/', [RegisteredUserController::class, 'create']);
 
 
 

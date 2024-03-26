@@ -12,14 +12,6 @@ class AuthenticatedSessionController extends Controller
     return view('index');
    }
 
-   public function Timestamps(Request $request)
-   {
-    $timestamp = timestamp::all();
-    timestamp::create($timestamp);
-
-    return redirect('/');
-   }
-
    public function attendance()
    {
 

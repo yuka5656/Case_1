@@ -16,10 +16,10 @@ class CreateTimestampsTable extends Migration
         Schema::create('timestamps', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->dateTime('work_Start');
-            $table->dateTime('work_End');
-            $table->dateTime('break_Start');
-            $table->dateTime('break_End');
+            $table->datetime('work_Start');
+            $table->datetime('work_End');
+            $table->datetime('break_Start');
+            $table->datetime('break_End');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTimestampsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('timeatamps');
+        Schema::dropIfExists('timestamps');
     }
 }
