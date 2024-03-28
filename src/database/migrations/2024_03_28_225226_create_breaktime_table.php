@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTimestampsTable extends Migration
+class CreateBreaktimeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTimestampsTable extends Migration
      */
     public function up()
     {
-        Schema::create('timestamps', function (Blueprint $table) {
+        Schema::create('breaktime', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->datetime('work_Start');
-            $table->datetime('work_End');
+            $table->foreignId('timestamp_id')->constrained()->cascadeOnDelete();
+            $table->datetime('break_Start');
+            $table->datetime('break_End');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTimestampsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('timestamps');
+        Schema::dropIfExists('breaktime');
     }
 }
