@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'index']);
 });
 
-Route::post('/', [RegisteredUserController::class, 'create']);
+Route::post('/', [AuthenticatedSessionController::class, 'create']);
 
 
 

@@ -16,13 +16,14 @@
         </form> -->
         <form action="/" class="timestamp" method="post">
         @csrf
-        <input class="input" type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            <input class="input" type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <input type="hidden" name="work_Start">
             <button type="submit">勤務開始</button>
         </form>
         <form action="/" class="timestamp" method="post">
         @csrf
-            <button type="submit" name="work_End" >勤務終了</button>
+            <input type="hidden" name="work_End">
+            <button type="submit">勤務終了</button>
         </form>
         <form action="/" class="timestamp" method="post">
         @csrf
