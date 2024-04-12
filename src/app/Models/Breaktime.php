@@ -13,8 +13,8 @@ class Breaktime extends Model
         'timestamp_id','break_Start', 'break_End',
     ];
 
-    public function create()
+    public function timestamp()
     {
-        return $this->belongsTo(timestamps::class);
+        return $this->belongsTo(Timestamp::class);
     }
 }

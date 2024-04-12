@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Models\Timestamp;
 use App\Models\User;
+use App\Models\Breaktime;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -16,10 +18,16 @@ class AuthenticatedSessionController extends Controller
 
    public function create(Request $request)
    {
-    $timestamp = $request->all();
-    Timestamp::create($timestamp);
+      $user_id = $request->only(['user_id', 'work_End']);
+      $timestamp = Carbon::now();
+      // dd($user_id, $timestamp);
 
-    return redirect('/');
+      Timestamp::create([
+         'user_id' => $user_id,
+         'work_Start' => $timestamp,
+      ]);
+
+      return redirect('/');
    }
 
    public function attendance()
