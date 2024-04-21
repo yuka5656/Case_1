@@ -18,16 +18,34 @@ class AuthenticatedSessionController extends Controller
 
    public function create(Request $request)
    {
-      $user_id = $request->only(['user_id', 'work_End']);
-      $timestamp = Carbon::now();
-      // dd($user_id, $timestamp);
-
-      Timestamp::create([
+      $user_id = $request->input('user_id');
+      $work_start = Carbon::now();
+      timestamp::create([
          'user_id' => $user_id,
-         'work_Start' => $timestamp,
+         'work_Start' => $work_start,
       ]);
 
+      if($work_start){
+
+      }
+      
       return redirect('/');
+   }
+
+   public function store(Request $request)
+   {
+      $user_id = $request->input('user_id');
+      $work_end = timestamp::where('user_id', $user_id)->latest()->first();
+      dd($user_id, $work_end);
+
+
+      timestamp::update([
+         'work_End' => Carbon::now(),
+      ]);
+      
+
+      return redirect('/');
+
    }
 
    public function attendance()

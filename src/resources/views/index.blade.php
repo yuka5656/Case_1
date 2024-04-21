@@ -10,19 +10,17 @@
         <p>{{ Auth::user()->name }}さんお疲れ様です！</p>
     </div>
     <div class="content__form-buttons">
-        <form action="/" class="timestamp" method="post">
+        <form action="/create" class="timestamp" method="post">
         @csrf
         @method('POST')
             <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
-            <input type="hidden" name="work_Start" value=" {{ Auth::user()->work_Start }} ">
-            <button type="submit">勤務開始</button>
+            <button type="submit" name="work_start">勤務開始</button>
         </form>
-        <form action="/" class="timestamp" method="post">
+        <form action="/store" class="timestamp" method="post">
         @csrf
         @method('POST')
             <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
-            <input type="hidden" name="work_End" value="">
-            <button type="submit">勤務終了</button>
+            <button type="submit" name="work_end">勤務終了</button>
         </form>
         <form action="/" class="timestamp" method="post">
         @csrf
