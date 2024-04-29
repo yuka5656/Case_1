@@ -10,27 +10,29 @@
         <p>{{ Auth::user()->name }}さんお疲れ様です！</p>
     </div>
     <div class="content__form-buttons">
-        <form action="/create" class="timestamp" method="post">
+        <form action="/create/workStart" class="timestamp" method="post">
         @csrf
         @method('POST')
             <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
             <button type="submit" name="work_start">勤務開始</button>
         </form>
-        <form action="/store" class="timestamp" method="post">
+        <form action="/store/workEnd" class="timestamp" method="post">
         @csrf
         @method('POST')
             <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
             <button type="submit" name="work_end">勤務終了</button>
         </form>
-        <form action="/" class="timestamp" method="post">
+        <form action="/create/breakStart" class="timestamp" method="post">
         @csrf
         @method('POST')
-            <button type="submit">休憩開始</button>
+            <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
+            <button type="submit" name="break_Start">休憩開始</button>
         </form>
-        <form action="/" class="timestamp" method="post">
+        <form action="/store/breakEnd" class="timestamp" method="post">
         @csrf
         @method('POST')
-            <button type="submit">休憩終了</button>
+            <input class="input" type="hidden" name="user_id" value=" {{ Auth::user()->id }} ">
+            <button type="submit" name="break_end">休憩終了</button>
         </form>
     </div>
 </div>

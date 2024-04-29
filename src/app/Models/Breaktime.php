@@ -10,11 +10,11 @@ class Breaktime extends Model
     use HasFactory;
 
     protected $fillable = [
-        'timestamp_id','break_Start', 'break_End',
+        'user_id','break_Start', 'break_End',
     ];
 
-    public function timestamp()
+    public function user()
     {
-        return $this->belongsTo(Timestamp::class);
+        return $this->belongsTo(User::class);
     }
 }

@@ -15,4 +15,7 @@ yarn-error.log
 /.vscode
 /#id_16384_0.dblwr
 binlog.000003
-
+breaktimes.ibd
+failed_jobs.ibd
+migrations.ibd
+pessword_resets.ibd

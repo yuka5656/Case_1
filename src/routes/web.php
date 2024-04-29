@@ -17,9 +17,10 @@ use App\Http\Controllers\AuthenticatedSessionController;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'index']);
-    Route::post('/create', [AuthenticatedSessionController::class, 'create']);
-    Route::post('/store', [AuthenticatedSessionController::class, 'store']);
-
+    Route::post('/create/workStart', [AuthenticatedSessionController::class, 'workStart']);
+    Route::post('/store/workEnd', [AuthenticatedSessionController::class, 'workEnd']);
+    Route::post('/create/breakStart', [AuthenticatedSessionController::class, 'breakStart']);
+    Route::post('/store/breakEnd', [AuthenticatedSessionController::class, 'breakEnd']);
 });
 
 

@@ -16,41 +16,62 @@ class AuthenticatedSessionController extends Controller
     return view('index');
    }
 
-   public function create(Request $request)
+   public function workStart(Request $request)
    {
       $user_id = $request->input('user_id');
       $work_start = Carbon::now();
+
       timestamp::create([
          'user_id' => $user_id,
          'work_Start' => $work_start,
       ]);
 
-      if($work_start){
-
-      }
       
       return redirect('/');
    }
 
-   public function store(Request $request)
+   public function workEnd(Request $request)
    {
       $user_id = $request->input('user_id');
+
       $work_end = timestamp::where('user_id', $user_id)->latest()->first();
-      dd($user_id, $work_end);
 
-
-      timestamp::update([
+      $work_end->update([
          'work_End' => Carbon::now(),
       ]);
-      
 
       return redirect('/');
-
    }
 
-   public function attendance()
+   public function breakStart(Request $request)
    {
+      $user_id = $request->input('user_id');
+      $break_start = Carbon::now();
 
+      breaktime::create([
+         'user_id' => $user_id,
+         'break_Start' => $break_start,
+      ]);
+
+      return redirect('/');
+   }
+
+   public function breakEnd(Request $request)
+   {
+      $user_id = $request->input('user_id');
+
+      $break_end = breaktime::where('user_id', $user_id)->latest()->first();
+
+      $break_end->update([
+         'break_End' => Carbon::now(),
+      ]);
+
+      return redirect('/');
+   }
+
+   public function attendance(Request $request)
+   {
+      dd($request->date);
     return view('attendance');
    }
 }
