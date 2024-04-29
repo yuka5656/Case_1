@@ -7,7 +7,7 @@
 @section('content')
 <div class="page_form-content">
     <div class="page_form-date">
-        
+        <a href="/attendance?date=20240423">テスト</a>
     </div>
 </div>
 @endsection

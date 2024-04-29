@@ -10,11 +10,11 @@ class Timestamp extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'work_Start', 'work_End', 'break_Start', 'break_End',
+        'user_id', 'work_Start', 'work_End',
     ];
 
     public function user()
     {
-        return $this->belongsTo(users::class);
+        return $this->belongsTo(User::class);
     }
 }

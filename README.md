@@ -2,13 +2,13 @@
 
 # アプリケーション名: 　Atte
 ・ログインページ
-![ログインページ](image-1.png)
+![ログインページ](img/image-1.png)
 ・ユーザー登録ページ
-![ユーザー登録ページ](image-2.png)
+![ユーザー登録ページ](img/image-2.png)
 ・出退勤打刻ページ
-![打刻ページ](image.png)
+![打刻ページ](img/image.png)
 ・日付別勤怠管理ページ
-![日付別勤怠管理ページ](image-3.png)
+![日付別勤怠管理ページ](img/image-3.png)
 
 ## 目的・目標
 目的：人事評価のため
@@ -55,7 +55,7 @@ phpMyAdmin: Http://localhost:8080/
 
 
 ## ER図
-![ER図](index.drawio.png)
+![ER図](img/index.drawio.png)
 
 # 環境構築
 
