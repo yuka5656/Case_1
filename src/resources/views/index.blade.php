@@ -6,6 +6,13 @@
 
 @section('content')
 <div class="content__form">
+    <div>
+        @if (session('message'))
+        <div class="message">
+            {{ session('message') }}
+        </div>
+        @endif
+    </div>
     <div class="content__form-text">
         <p>{{ Auth::user()->name }}さんお疲れ様です！</p>
     </div>

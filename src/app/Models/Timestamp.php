@@ -10,7 +10,7 @@ class Timestamp extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'work_Start', 'work_End',
+        'user_id', 'today', 'work_Start', 'work_End',
     ];
 
     public function user()

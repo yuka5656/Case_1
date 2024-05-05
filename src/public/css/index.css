@@ -4,6 +4,12 @@
     font-weight: bold;
 }
 
+.message{
+    padding: 20px;
+    background-color: #E6E6FA;
+    color: #1E90FF;
+}
+
 .content__form {
     background-color: #DCDCDC;
     height: 79vh;
