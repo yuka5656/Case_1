@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\Timestamp;
 use App\Models\User;
 use App\Models\Breaktime;
+use Illuminate\Support\Facades\DB;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -101,6 +102,11 @@ class AuthenticatedSessionController extends Controller
 
    public function attendance(Request $request)
    {
-    return view('attendance');
+      // $users = User::all();
+      // dd($users);
+
+      $users = User::Paginate(1);
+
+      return view('attendance', compact('users'));
    }
 }

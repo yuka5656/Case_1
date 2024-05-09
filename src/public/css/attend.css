@@ -1,0 +1,36 @@
+.page_content {
+    background-color: #DCDCDC;
+    height: 79vh;
+
+}
+
+.page_content-date {
+    text-align: center;
+    padding: 40px 50px;
+}
+
+.page_content-administer {}
+
+.page_content-table {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.page_content-table tr {
+    border-top: 1px solid #696969;
+    /* border-bottom: 1px solid #696969; */
+}
+
+.page_content-table th {
+    padding: 20px 30px;
+    border-top: 1px solid #696969;
+}
+
+.page_content-table td {
+    padding: 20px 30px;
+}
+
+.paginate {
+    /* margin: 0 auto; */
+}
