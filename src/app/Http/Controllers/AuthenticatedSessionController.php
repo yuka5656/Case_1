@@ -100,13 +100,31 @@ class AuthenticatedSessionController extends Controller
       return redirect('/')->with('message', '休憩時間を終了しました');
    }
 
-   public function attendance(Request $request)
+   public function attendance()
    {
-      // $users = User::all();
-      // dd($users);
 
-      $users = User::Paginate(1);
+      $users = User::Paginate(2);
 
-      return view('attendance', compact('users'));
+      return view('attendance', ['users' => $users]);
+   }
+
+   private $user;
+
+   public function __construct(User $user)
+   {
+
+      $this->user = $user;
+
+      $attendances = $this->user->getDailyAttendance();
+
+      // dd($attendance,$users);
+      var_dump($attendances);
+
+      return view('attendance', compact('attendances', 'user',  ));
+   }
+
+   public function getPaginate(){
+
+      
    }
 }

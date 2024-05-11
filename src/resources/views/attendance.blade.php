@@ -7,7 +7,7 @@
 @section('content')
 <div class="page_content">
     <div class="page_content-date">
-        <a href="/attendance?date=20240423">テスト</a>
+        <a href="/attendance?date=today">テスト</a>
     </div>
     <div class="page_content-administer">
         <table class="page_content-table">
@@ -22,7 +22,7 @@
             <tr>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->work_Start }}</td>
-                <td></td>
+                <td>{{ $user->work_End }}</td>
                 <td></td>
                 <td></td>
             </tr>

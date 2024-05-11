@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Timestamp;
+use App\Models\Breaktime;
 
 class User extends Authenticatable
 {
@@ -45,22 +48,25 @@ class User extends Authenticatable
 
     public function timestamp()
     {
-        $users = DB::table('users')
-                    ->join('timestamps', 'users.id', '=', 'timestamps.user_id')
-                    ->join('breaktimes', 'users.id', '=', 'breaktimes.user_id')
-                    ->get();
-
         return $this->hasMany(Timestamp::class);
     }
 
     public function breaktime()
     {
-        // $users = DB::table('users')
-        //             ->join('breaktimes', 'users.id', '=', 'breaktimes.user_id')
-        //             ->get();
-
         return $this->hasMany(Breaktime::class);
     }
+
+    public function getDailyAttendance(){
+
+        $attendance = DB::table('users')
+                    ->join('timestamps', 'users.id', '=', 'timestamps.user_id')
+                    ->join('breaktimes', 'users.id', '=', 'breaktimes.user_id')
+                    ->get();
+
+        return $attendance;
+    }
+
+
 
 }
 
