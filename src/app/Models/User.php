@@ -66,9 +66,4 @@ class User extends Authenticatable
         return $attendance;
     }
 
-
-
 }
-
-// 条件をつけて紐づけする(モデルに)
-// ジョインとウェアを使う
