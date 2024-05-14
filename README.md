@@ -61,7 +61,7 @@ phpMyAdmin: Http://localhost:8080/
 
 Dockerビルド
 
-    1.git clone これから
+    1.git clone git@github.com:yuka5656/Case_1.git
 
     2.docker-compose up -d --build
 

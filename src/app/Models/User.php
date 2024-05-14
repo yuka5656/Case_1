@@ -61,7 +61,7 @@ class User extends Authenticatable
         $attendance = DB::table('users')
                     ->join('timestamps', 'users.id', '=', 'timestamps.user_id')
                     ->join('breaktimes', 'users.id', '=', 'breaktimes.user_id')
-                    ->get();
+                    ->Paginate(6);
 
         return $attendance;
     }

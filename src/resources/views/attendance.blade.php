@@ -7,7 +7,15 @@
 @section('content')
 <div class="page_content">
     <div class="page_content-date">
-        <a href="/attendance?date=today">テスト</a>
+    <form action="/attendance/yesterday" method="get">
+        <button><</button>
+    </form>
+        <a href="/attendance?date=20240503">
+            2024-05-03
+        </a>
+    <form action="/attendance/tomorrow" method="get">
+        <button>></button>
+    </form>
     </div>
     <div class="page_content-administer">
         <table class="page_content-table">
@@ -18,11 +26,11 @@
                 <th><span>休憩時間</span></th>
                 <th><span>勤務時間</span></th>
             </tr>
-            @foreach ($users as $user)
+            @foreach ($attendances as $attendance)
             <tr>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->work_Start }}</td>
-                <td>{{ $user->work_End }}</td>
+                <td>{{ $attendance->name }}</td>
+                <td>{{ $attendance->work_Start }}</td>
+                <td>{{ $attendance->work_End }}</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -31,7 +39,7 @@
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
     <div class="paginate">
-        {{ $users->links() }}
+        {{ $attendances->links() }}
     </div>
 </div>
 @endsection
