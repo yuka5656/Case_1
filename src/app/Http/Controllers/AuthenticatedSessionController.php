@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\Timestamp;
 use App\Models\User;
 use App\Models\Breaktime;
+use Illuminate\Support\Facades\DB;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -99,8 +100,17 @@ class AuthenticatedSessionController extends Controller
       return redirect('/')->with('message', '休憩時間を終了しました');
    }
 
-   public function attendance(Request $request)
+   private $users;
+
+   public function attendance(User $users)
    {
-    return view('attendance');
+
+      $this->users = $users;
+
+      $attendances = $this->users->getDailyAttendance();
+
+      return view('attendance')->with('attendances', $attendances);
    }
+
+
 }

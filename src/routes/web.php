@@ -24,6 +24,9 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
-
 Route::get('/attendance', [AuthenticatedSessionController::class, 'attendance']);
+Route::get('/attendance/tomorrow', [AuthenticatedSessionController::class, 'tomorrow']);
+Route::get('/attendance/yesterday', [AuthenticatedSessionController::class, 'yesterday']);
+
+
+
