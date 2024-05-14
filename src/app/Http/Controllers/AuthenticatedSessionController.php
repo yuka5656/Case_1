@@ -108,16 +108,9 @@ class AuthenticatedSessionController extends Controller
       $this->users = $users;
 
       $attendances = $this->users->getDailyAttendance();
-      // dd($attendances);
-      // var_dump($attendances);
+
       return view('attendance')->with('attendances', $attendances);
    }
 
-   public function tomorrow(){
-      
-   }
 
-   public function yesterday(){
-      
-   }
 }

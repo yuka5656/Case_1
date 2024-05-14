@@ -7,15 +7,15 @@
 @section('content')
 <div class="page_content">
     <div class="page_content-date">
-    <form action="/attendance/yesterday" method="get">
-        <button><</button>
-    </form>
-        <a href="/attendance?date=20240503">
-            2024-05-03
-        </a>
-    <form action="/attendance/tomorrow" method="get">
-        <button>></button>
-    </form>
+        <form action="/attendance/yesterday" method="get">
+            <button><</button>
+        </form>
+            <a href="/attendance?date=20240503">
+                2024-05-03
+            </a>
+        <form action="/attendance/tomorrow" method="get">
+            <button>></button>
+        </form>
     </div>
     <div class="page_content-administer">
         <table class="page_content-table">
@@ -34,7 +34,7 @@
                 <td></td>
                 <td></td>
             </tr>
-             @endforeach
+            @endforeach
         </table>
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
